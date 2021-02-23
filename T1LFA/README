@@ -1,0 +1,21 @@
+#Sulimovici Raoul-Renatto 331CB
+
+    Codul contine doua functii, una de matching si una pentru matricea delta:
+        
+        ->Pentru matricea delta am iterat prin pattern cu 2 for-uri. Am verificat daca
+            prefix-ul curent (incepand cu epsilon) concatenat cu fiecare litera din pattern
+            corespunde cu starea urmatoare. Daca da, completez in matrice. Daca nu, verific
+            fiecare sufix al prefix-ului curent cu fiecare prefix al pattern-ului. (iterez pe
+            prefix-ul curent de la stanga la dreapta si verific
+            matching-ul cu pattern-ul iterat de la dreapta la stanga)
+
+
+
+        ->Pentru functia de matching am folosit logica prezentata la curs. Se itereaza
+            litera cu litera textul si se verifica starea curenta. Daca aceasta este
+            egala cu lungimea pattern-ului inseamna ca am ajuns in starea finala si
+            substring-ul corespunde cu pattern-ul. (Succes)
+
+    Mentiuni: Prefixul poate deveni in ultima stare cu o litera mai mare decat pattern-ul,
+                asa ca in acest caz voi taia prima litera din pattern, dupa care voi continua
+                cu while-ul pana va da match

@@ -1,0 +1,19 @@
+#Sulimovici Raoul-Renatto 331CB
+
+ -> Implementarea se foloseste de o stiva, creata de mine, pentru a mima comportamentul PDA-ului (fisierul Stack.py).
+
+ -> Fisierul main.py contine o clasa Parser care preia inputul si il parseaza sub forma de arbore de parsare cu ajutorul functiilor reduce,
+care scot din stiva token-urile input-ului.
+    In init am codificat un PDA general pentru limbajul din tema.
+    Functia nextState va returna in functie de starea actuala si simbol starea urmatoare.
+    Functia reduce va apela, pentru fiecare caz, cate o functie de reduce pentru fiecare token din gramatica.
+    Aceste functii de reduce vor scoate de pe stiva caracterele si vor pune la loc o expresie in urma aplicarii operatiei specifice
+    Functia parse va apela intr-un while logica de mai sus
+
+    In main se afla si o clasa NFA care codifica NFA-ul de care ma folosesc
+    Acesta are o functie merge care adauga starile si tranzitiile pe masura ce evaluez expresia
+
+    Se realizeaza scrierea si citirea, apelul pentru conversia din nfa in dfa
+
+ -> Fisierul expr contine clase pentru fiecare token din gramatica si implementeaza functiile de parseTree, care afiseaza
+        sub forma de arbore expresia, respectiv buildNFA care construieste NFA-ul recursiv

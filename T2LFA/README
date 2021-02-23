@@ -1,0 +1,10 @@
+#Sulimovici Raoul-Renatto 331CB
+
+-> Am folosit o clasa generala pentru orice automat finit. Am initializat nfa-ul dat si am aplicat functia nfa_to_dfa care ofera rezultatul cerut.
+
+-> Pentru fiecare stare, incepand cu cea initiala, voi aplica o functie care creeaza un dictionar cu starile in care pot ajunge pe fiecare simbol.
+Voi extinde starile posibile prin functia epsilon (adaug in starile posibile starile in care se ajunge cu epsilon). Parcurg fiecare stare posibila calculata si, daca nu exista in dfa, o adaug, dupa care salvez tranzitiile corespunzatoare pentru aceasta. Daca starea exista deja, actualizez tranzitiile.
+
+-> Am creat o stare sink in care se vor duce toate starile nedefinite pe unul sau mai multe simboluri.
+
+-> Am salvat starile finale ale dfa-ului ca fiind toate starile care contin o stare finala din nfa
